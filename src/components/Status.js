@@ -3,11 +3,16 @@ import { Card, ListGroup } from 'react-bootstrap'
 import { data } from '../test'
 import StatusItem from './StatusItem'
 
-function Status() {
+function Status({ status }) {
   const body = data.map((item, index) => {
     return (
       <ListGroup.Item>
-        <StatusItem temperature={item[0]} time={item[1]} num={index} />
+        <StatusItem
+          temperature={item[0]}
+          time={item[1]}
+          num={index}
+          currentStatus={status.stages ? status.stages[index] : null}
+        />
       </ListGroup.Item>
     )
   })

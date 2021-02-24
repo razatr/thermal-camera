@@ -1,35 +1,22 @@
-import React, { useState } from 'react'
-import { Container, Row, Col, Button } from 'react-bootstrap'
-import Temperature from './components/Temperature'
-import Status from './components/Status'
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Home from './components/Home'
+import Menu from './components/Menu'
+import Settings from './components/Settings'
 
 function App() {
-  const [status, setStatus] = useState(false)
-
   return (
-    <Container>
-      <Row>
-        <Col md={6} sm={12}>
-          <Temperature />
-        </Col>
-        <Col md={6} sm={12}>
-          Влажность
-        </Col>
-      </Row>
-      <Row>
-        <Status status={status} />
-      </Row>
-      <Row className="justify-content-center">
-        <Button
-          variant="primary"
-          onClick={() => {
-            setStatus(!status)
-          }}
-        >
-          {status ? 'Остановить' : 'Начать'}
-        </Button>
-      </Row>
-    </Container>
+    <Router>
+      <Menu />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/settings">
+          <Settings />
+        </Route>
+      </Switch>
+    </Router>
   )
 }
 

@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.settings-selector {
+  margin: 12px 0;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -20,4 +24,31 @@ code {
 .status {
   width: 100%;
   margin: 12px;
+}
+
+.link-color {
+  color: white;
+}
+
+.link-color:hover {
+  color: #999;
+}
+
+.mode-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mode-settings {
+  position: absolute;
+}
+
+.close-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.list-item-button {
+  display: flex;
+  justify-content: center;
 }
