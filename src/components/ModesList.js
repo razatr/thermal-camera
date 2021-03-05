@@ -18,7 +18,7 @@ function ModesList() {
       <Card className="status">
         <ListGroup variant="flush">{body}</ListGroup>
       </Card>
-      <ModeSettings mode={inSetup} setInSetup={setInSetup} />
+      <ModeSettings info={inSetup} setInSetup={setInSetup} />
     </>
   )
 }

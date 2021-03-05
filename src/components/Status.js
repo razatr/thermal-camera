@@ -1,9 +1,8 @@
 import React from 'react'
 import { Card, ListGroup } from 'react-bootstrap'
-import { data } from '../test'
 import StatusItem from './StatusItem'
 
-function Status({ status }) {
+function Status({ status, data }) {
   const body = data.map((item, index) => {
     return (
       <ListGroup.Item>

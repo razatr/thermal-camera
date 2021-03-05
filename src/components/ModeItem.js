@@ -7,7 +7,7 @@ function ModeItem({ num, info, setInSetup }) {
       <div>{`Программа номер ${num + 1}`}</div>
       <Button
         onClick={() => {
-          setInSetup(info)
+          setInSetup({ num, mode: info })
         }}
       >
         Настроить
