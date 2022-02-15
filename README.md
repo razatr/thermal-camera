@@ -32,3 +32,4 @@
 ### Загрузка скриптов на ESP
 Далее нам нужно запустить ESPlorer нажав ESPlorer.bat в скачанной папке. После нужно открыть порт нажава кнопку "Open", предварительно выставив настройки как на скриншоте </br>
 <img src="https://github.com/razatr/thermal-camera/blob/main/images/ESPlorer%20settings.png" width="697px" title="Settings"> </br>
+После подключения в консольном окне обычно появляется сообщение "Communication with MCU..Waiting answer from ESP - Timeout reached. Command aborted.". Далее нажмите FS Info на панели справа, и потом "Reload". После этого ESPlorer нормально вилит все файлы и можно работать без ошибок. Потом нажимаем Upload в левой, нижней части программы, выбираем все файлы из папки ESP-files и нажимаем "Open". Загрузка займет некоторое время. После чего ESP готова к использованию как написано в [Как этот работает](https://github.com/razatr/thermal-camera#%D0%BA%D0%B0%D0%BA-%D1%8D%D1%82%D0%BE-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82)
