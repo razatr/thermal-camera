@@ -19,22 +19,22 @@
 Термокамера собрана из того, что было под рукой. 
 Специально были куплены только два бытовых тепловентилятора, три подшипника 6001 (101), два симистора BTA41 600, клиновой ремень привода 530 мм, полметра резиновой трубки Ф32мм, электрический звонок на 220 В. Всего на сумму не более 1500 руб. 
 Основа - корпус нерабочего холодильника. Наличие теплоизолированных стенок позволяет быстрее выходить на рабочий режим и не греть улицу. Для нагрева используются два бытовых тепловентилятора.
-<img src="https://github.com/razatr/thermal-camera/blob/main/images/app-set-time.png" width="250px" title="Set time"> </br>
+<img src="https://github.com/razatr/thermal-camera/blob/main/images/fridge1.jpg" width="626px" title="Fridge"> </br>
 Горячий воздух от тепловентиляторов не напрямую направляется на кассету с пчелами, а циркулирует по кругу. Сначала проходит вдоль дна термокамеры, заодно нагревая алюминиевый поддон под кассетой, затем обдувает кассету. 
-<img src="https://github.com/razatr/thermal-camera/blob/main/images/app-set-time.png" width="250px" title="Set time"> </br>
+<img src="https://github.com/razatr/thermal-camera/blob/main/images/fridge2.jpg" width="626px" title="Fridge"> </br>
 Температура с точностью до 0,1 градуса и влажность с точностью до 1% контролируется при помощи двух модулей BME280. Первый из этих модулей размещен на входе горячего воздуха к кассете с пчелами, второй после кассеты, на выходе. На фото второй модуль: </br>
-<img src="https://github.com/razatr/thermal-camera/blob/main/images/app-set-time.png" width="250px" title="Set time"> </br>
+<img src="https://github.com/razatr/thermal-camera/blob/main/images/bme.jpg" width="626px" title="BME"> </br>
 Для регулировки температуры используются данные с первого модуля ВМЕ280. Данные с обоих модулей отображаются на экране управления </br>
-<img src="https://github.com/razatr/thermal-camera/blob/main/images/app-set-time.png" width="250px" title="Set time"> </br>
+<img src="https://github.com/razatr/thermal-camera/blob/main/images/app-running.jpg" width="230px" title="App"> </br>
 Вращение кассеты с пчелами осуществляется двигателем с редуктором.</br>
-<img src="https://github.com/razatr/thermal-camera/blob/main/images/app-set-time.png" width="250px" title="Set time"> </br>
+<img src="https://github.com/razatr/thermal-camera/blob/main/images/fans.jpg" width="626px" title="Fans"> </br>
 Скорость вращения валов 17 об/мин. Первый вал соединен непосредственно с редуктором, второй соединен с первым посредством ремня. Валы представляют собой трубу с внешним диаметром 34 мм. В свободных концах труб сделаны проточки диаметром 27 мм, куда вставлены подшипники 6001 (101). В местах опоры кассет (кассеты цилиндрические) на валы надеты куски резиновой трубки. От смещения кассеты вдоль вала, удерживают две твист крышки от обычных стеклянных банок. Твист крышки фиксируются вторым куском резиновой трубки. Канавку для ремня образуют еще пара кусков трубки, надетых с промежутком в ширину ремня. Натягивается ремень болтом М12, толкающим профтрубу 25х25 мм, вставленную в профтрубу 30х30 мм.</br>
-<img src="https://github.com/razatr/thermal-camera/blob/main/images/app-set-time.png" width="250px" title="Set time"> </br>
+<img src="https://github.com/razatr/thermal-camera/blob/main/images/heaters.jpg" width="715px" title="Heaters"> </br>
 На этом же фото виден первый модуль ВМЕ280 (на конце белого кабеля). 
 Обвязка для ESP8266 была в наличии. Лет 5 назад собирал Wi-Fi контрольные весы для пчел. Осталось некоторое количество готовых плат. Питание 5В сделал от обычного зарядника для телефона.
 ## Гайд по установке и сборке рабочей термокамеры
 ### Сборка платы и подключение необходимых датчиков
-<img src="https://github.com/razatr/thermal-camera/blob/main/images/app-set-time.png" width="250px" title="Set time"> </br>
+<img src="https://github.com/razatr/thermal-camera/blob/main/images/scheme.png" title="Scheme"> </br>
 Еще немного пояснений к схеме. Резисторы R16 и R17 мощностью 1 Вт. Можно взять любой номинал в пределах 330-510 Ом.
 Нагревательные элементы тепловентиляторов. В каждом тепловентиляторе их два сопротивлением 55 Ом, соответственно мощность их по 880 Вт каждый. R20 и R21 от одного тепловентилятора, R22 и R23 от другого. 
 Как они сгруппированы в термокамере? Постоянно регулировка осуществляется парой основных нагревательных элементов R20 и R22, включенных последовательно. При таком включении они выделяют мощность 440 Вт. Этого достаточно, чтоб поддерживать температуру на нужном уровне.
@@ -48,12 +48,12 @@
 Сделано это для того, чтоб нагреватели невозможно было включить, пока выключены вентиляторы.
 Индикация работы. 
 - при включении термокамеры в сеть, светится светодиод LED4 (красного цвета) </br>
-- <img src="https://github.com/razatr/thermal-camera/blob/main/images/app-set-time.png" width="250px" title="Set time"> </br>
+- <img src="https://github.com/razatr/thermal-camera/blob/main/images/box-red.jpg" width="715px" title="Red ligth"> </br>
 - при включении основного нагревателя светится светодиод LED3 (зеленого цвета)
 - при включении ускоряющего нагревателя светится светодиод LED2 (зеленого цвета)</br>
-- <img src="https://github.com/razatr/thermal-camera/blob/main/images/app-set-time.png" width="250px" title="Set time"> </br>
+- <img src="https://github.com/razatr/thermal-camera/blob/main/images/box-all.jpg" width="626px" title="All ligth"> </br>
 - при включении звукового сигнала светится светодиод LED1 (синего цвета)</br>
-- <img src="https://github.com/razatr/thermal-camera/blob/main/images/app-set-time.png" width="250px" title="Set time"> </br>
+- <img src="https://github.com/razatr/thermal-camera/blob/main/images/box.jpg" width="626px" title="Box"> </br>
 ### Подключение ESP8266 к компьютеру через программатор
 Для подключения микроконтроллера и его настройки можно пропустить шаг сборки. Нужно лишь установить его на плату с пинами для подключения.
 Первым делом нам нужно установить необходимые программы на компьютер:
