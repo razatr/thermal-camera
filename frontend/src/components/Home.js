@@ -101,6 +101,7 @@ function Home({ status }) {
         <Row className="justify-content-center">
           <Button
             variant="primary"
+            class="btn btn-primary btn-lg btn-block"
             onClick={() => {
               async function start() {
                 const response = await fetch(
